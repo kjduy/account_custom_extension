@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="invoice_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="container">
+                        <div class="text-center my-4">
+                            <h1 class="text-primary">Invoice Report</h1>
+                            <hr style="border-top: 2px solid #007bff;"/>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <h3>Invoice Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Invoice:</th>
+                                        <td><t t-esc="doc.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Amount:</th>
+                                        <td><t t-esc="doc.amount_total"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Risk Level:</th>
+                                        <td>
+                                            <span t-if="doc.invoice_risk_level == 'low'" class="badge bg-success">Low</span>
+                                            <span t-if="doc.invoice_risk_level == 'medium'" class="badge bg-warning text-dark">Moderate</span>
+                                            <span t-if="doc.invoice_risk_level == 'high'" class="badge bg-danger">High</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Reference Number:</th>
+                                        <td><t t-esc="doc.invoice_reference_number"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Special Invoice:</th>
+                                        <td>
+                                            <t t-if="doc.is_special_invoice">
+                                                <span class="badge bg-danger">Yes</span>
+                                            </t>
+                                            <t t-else="">
+                                                <span class="badge bg-success">No</span>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Customer Contact:</th>
+                                        <td><t t-esc="doc.customer_contact.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Invoice Date:</th>
+                                        <td><t t-esc="doc.invoice_date"/></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_custom_extension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-30 07:18+0000\n"
+"PO-Revision-Date: 2025-01-30 07:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_custom_extension
+#: model:ir.actions.report,print_report_name:account_custom_extension.action_report_invoice_custom
+msgid "(object._get_report_base_filename())"
+msgstr ""
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "<span class=\"badge bg-danger\">Yes</span>"
+msgstr ""
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "<span class=\"badge bg-success\">No</span>"
+msgstr ""
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__account_payment_term
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__account_payment_term
+msgid "Account Payment Term"
+msgstr "Plazo de pago de la cuenta"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_move_form_custom
+msgid "Additional Info."
+msgstr "Información Adicional"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Amount:"
+msgstr "Monto:"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_bill_list_additional_info
+msgid "Bills additional info"
+msgstr "Facturas Información adicional"
+
+#. module: account_custom_extension
+#: model:ir.actions.act_window,name:account_custom_extension.action_move_bill_additional_info
+#: model:ir.ui.menu,name:account_custom_extension.menu_bill_additional_info
+msgid "Bills additional Info"
+msgstr "Facturas Información adicional"
+
+#. module: account_custom_extension
+#: model:ir.actions.report,name:account_custom_extension.action_report_invoice_custom
+msgid "Custom Invoice Report"
+msgstr "Informe de facturas"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__customer_contact
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__customer_contact
+msgid "Customer Contact"
+msgstr "Contacto cliente"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Customer Contact:"
+msgstr "Contacto cliente:"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_move_filter_custom
+msgid "High"
+msgstr "Elevado"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields.selection,name:account_custom_extension.selection__account_move__invoice_risk_level__high
+msgid "High Risk"
+msgstr "Riesgo Elevado"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+msgid "INV-%s"
+msgstr ""
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Invoice Date:"
+msgstr "Fecha de facturación:"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Invoice Details"
+msgstr "Detalles de la factura"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__invoice_reference_number
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__invoice_reference_number
+msgid "Invoice Reference Number"
+msgstr "Número de referencia de la factura"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Invoice Report"
+msgstr "Reporte de factura"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__invoice_risk_level
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__invoice_risk_level
+msgid "Invoice Risk Level"
+msgstr "Nivel de Riesgo de la factura"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Invoice:"
+msgstr "Factura:"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_invoice_list_additional_info
+msgid "Invoices Additional Info"
+msgstr "Facturas Información adicional"
+
+#. module: account_custom_extension
+#: model:ir.actions.act_window,name:account_custom_extension.action_move_invoice_additional_info
+#: model:ir.ui.menu,name:account_custom_extension.menu_invoice_additional_info
+msgid "Invoices additional info"
+msgstr "Facturas Información adicional"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__is_special_invoice
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__is_special_invoice
+msgid "Is Special Invoice?"
+msgstr "Es una factura especial?"
+
+#. module: account_custom_extension
+#: model:ir.model,name:account_custom_extension.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_move_filter_custom
+msgid "Low"
+msgstr "Bajo"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields.selection,name:account_custom_extension.selection__account_move__invoice_risk_level__low
+msgid "Low Risk"
+msgstr "Riesgo bajo"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.view_move_filter_custom
+msgid "Medium"
+msgstr "Moderado"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Moderate"
+msgstr "Moderado"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields.selection,name:account_custom_extension.selection__account_move__invoice_risk_level__medium
+msgid "Moderate Risk"
+msgstr "Riesgo Moderado"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Reference Number:"
+msgstr "Número de referencia:"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Risk Level:"
+msgstr "Nivel de Riesgo"
+
+#. module: account_custom_extension
+#: model_terms:ir.ui.view,arch_db:account_custom_extension.invoice_report_template
+msgid "Special Invoice:"
+msgstr "Factura especial"
+
+#. module: account_custom_extension
+#. odoo-python
+#: code:addons/account_custom_extension/models/account_move.py:0
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_bank_statement_line__unique_invoice_identifier
+#: model:ir.model.fields,field_description:account_custom_extension.field_account_move__unique_invoice_identifier
+msgid "Unique Invoice Identifier"
+msgstr "Identificador único de factura"

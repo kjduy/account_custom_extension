@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- FORM VIEW MODIFICATION -->
+        <record id="view_move_form_custom" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.custom</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page id="additional_info" string="Additional Info." name="additional_info">
+                        <group id="additional_info_entry_group">
+                            <group name="invoice_group">
+                                <field name="invoice_risk_level"/>
+                                <field name="unique_invoice_identifier" groups="account.group_account_manager"/>
+                                <field name="invoice_reference_number"/>
+                                <field name="is_special_invoice"/>
+                            </group>
+                            <group name="relational_group">
+                                <field name="account_payment_term" domain="[('early_pay_discount_computation','=','included')]"/>
+                                <field name="customer_contact" invisible="invoice_risk_level == 'high'"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- FILTERS -->
+        <record id="view_move_filter_custom" model="ir.ui.view">
+            <field name="name">account.move.filter.inherit.custom</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='myinvoices']" position="after">
+                    <separator/>
+                    <filter name="filter_risk_low" string="Low" domain="[('invoice_risk_level', '=', 'low')]"/>
+                    <filter name="filter_risk_medium" string="Medium" domain="[('invoice_risk_level', '=', 'medium')]"/>
+                    <filter name="filter_risk_high" string="High" domain="[('invoice_risk_level', '=', 'high')]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- CUSTOMER INVOICES -->
+        <record id="view_invoice_list_additional_info" model="ir.ui.view">
+            <field name="name">account.invoice.list.additional.info</field>
+            <field name="model">account.move</field>
+            <field name="arch" type="xml">
+                <list string="Invoices Additional Info" edit="0">
+                    <field name="invoice_risk_level"/>
+                    <field name="unique_invoice_identifier" groups="account.group_account_manager"/>
+                    <field name="invoice_reference_number"/>
+                    <field name="is_special_invoice"/>
+                    <field name="account_payment_term" domain="[('early_pay_discount_computation','=','included')]"/>
+                    <field name="customer_contact" invisible="invoice_risk_level == 'high'"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_move_invoice_additional_info" model="ir.actions.act_window">
+            <field name="name">Invoices additional info</field>
+            <field name="path">invoices-additional-info</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_invoice_list_additional_info"/>
+            <field name="domain">[('move_type', 'in', ['out_invoice', 'out_refund'])]</field>
+        </record>
+
+        <menuitem id="menu_invoice_additional_info"
+              name="Invoices additional info"
+              parent="account.menu_finance_receivables"
+              action="action_move_invoice_additional_info"/>
+
+        <!-- VENDOR BILLS -->
+        <record id="view_bill_list_additional_info" model="ir.ui.view">
+            <field name="name">account.bill.list.additional.info</field>
+            <field name="model">account.move</field>
+            <field name="arch" type="xml">
+                <list string="Bills Additional Info" edit="0">
+                    <field name="invoice_risk_level"/>
+                    <field name="unique_invoice_identifier" groups="account.group_account_manager"/>
+                    <field name="invoice_reference_number"/>
+                    <field name="is_special_invoice"/>
+                    <field name="account_payment_term" domain="[('early_pay_discount_computation','=','included')]"/>
+                    <field name="customer_contact" invisible="invoice_risk_level == 'high'"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_move_bill_additional_info" model="ir.actions.act_window">
+            <field name="name">Bills additional info</field>
+            <field name="path">bills-additional-info</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_bill_list_additional_info"/>
+            <field name="domain">[('move_type', 'in', ['in_invoice', 'in_refund'])]</field>
+        </record>
+
+        <menuitem id="menu_bill_additional_info"
+              name="Bills additional info"
+              parent="account.menu_finance_payables"
+              action="action_move_bill_additional_info"/>
+    </data>
+</odoo>
